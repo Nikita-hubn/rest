@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class UpdateTest extends BaseTest {
 
     @Test
@@ -19,9 +21,9 @@ public class UpdateTest extends BaseTest {
         String taskID = TaskCreationSpecification.correctTaskCreationWithIDExtract(baseUrl, authToken, task);
 
         UpdatePojo updatePojo = new UpdatePojo("*_*");
-
-        TaskUpdateSpecification.updateTask(baseUrl, authToken, updatePojo, taskID);
-
+        String expectedValue = "Issue";
+        String check=TaskUpdateSpecification.updateTask(baseUrl, authToken, updatePojo, taskID);
+        assertEquals(check, expectedValue);
         TaskDeleteSpecification.deleteTask(baseUrl, authToken, taskID);
     }
 }

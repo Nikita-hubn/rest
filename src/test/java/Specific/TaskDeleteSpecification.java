@@ -10,6 +10,7 @@ public class TaskDeleteSpecification {
                 .pathParams("issueID", taskID)
                 .when().delete("/issues/{issueID}")
                 .then()
+                .log().all()
                 .statusCode(200);;
     }
 }
