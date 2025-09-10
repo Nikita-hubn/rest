@@ -11,8 +11,8 @@ public class AddIsue extends BaseTest {
     void createTaskWithRequiredOnlyConstructorTest() {
         CreateIsuePojo task = new CreateIsuePojo(taskSummary, project);
         String expectedValue = "Issue";
-        String taskID = TaskCreationSpecification.correctTaskCreationWithTypeExtract(baseUrl, authToken, task);
-        assertEquals(taskID, expectedValue);
+        String type = TaskCreationSpecification.correctTaskCreationWithTypeExtract(baseUrl, authToken, task);
+        assertEquals(type, expectedValue);
 
     }
 }

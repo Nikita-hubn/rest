@@ -3,7 +3,7 @@ import POJO.UpdatePojo;
 import org.hamcrest.Matchers;
 import io.restassured.RestAssured;
 
-import static io.restassured.RestAssured.given;
+
 
 public class TaskUpdateSpecification {
     public static String updateTask(String baseUrl, String authToken , UpdatePojo updatePojo, String issueID) {
