@@ -14,9 +14,10 @@ public class UserInfoTest extends BaseTest {
     @Test
     public void getUserInfoTest() {
         String expectedLogin = "QA1";
-        Try curent = Promezh.userInfo(baseUrl,authToken,expectedLogin);
-        //assertEquals(expectedLogin, curent.getLogin());
-        UserInfoPojo user= UserInfoSpecification.userInfo(baseUrl,authToken,curent.getId());
-        assertEquals(user.getId(),curent.getId());
+        String user= UserInfoSpecification.userInfo(baseUrl,authToken);
+        //Try curent = Promezh.userInfo(baseUrl,authToken,expectedLogin);
+        assertEquals(expectedLogin, user);
+
+        // assertEquals(user.getId(),curent.getId());
     }
 }

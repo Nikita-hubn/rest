@@ -6,27 +6,26 @@ import POJO.UserInfoPojo;
 import static io.restassured.RestAssured.given;
 
 public class UserInfoSpecification {
-    /*public static UserInfoPojo userInfo(String baseURL, String authToken, String login){
+    public static String userInfo(String baseURL, String authToken){
         return given()
                 .auth().oauth2(authToken)
                 .baseUri(baseURL)
-                .pathParam("login", login)
-                .queryParam("fields", "id,login,ringId")
+                .queryParam("fields", "ringId,login,id,$type")
                 .contentType("application/json")
                 .accept("application/json")
                 .when()
-                .get("/api/users/{login}")
+                //.get("/api/users/{login}")
                 //.get("/userdetails/{user detail id}")
-                //.get("/api/users/me")
+                .get("/users/me")
                 .then()
                 .log().all()
                 .statusCode(200)
-                .extract()
-                .as(UserInfoPojo.class);
+                .extract().path("login");
+                //.as(UserInfoPojo.class);
     }
 
-     */
-    public static UserInfoPojo userInfo(String baseURL, String authToken, String id){
+
+   /*  public static UserInfoPojo userInfo(String baseURL, String authToken, String id){
         return given()
                 .auth().oauth2(authToken)
                 .baseUri(baseURL)
@@ -44,4 +43,6 @@ public class UserInfoSpecification {
                 .extract().as(UserInfoPojo.class);
         //.as(UserInfoPojo.class);
     }
+    .
+    */
 }
