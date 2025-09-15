@@ -13,5 +13,4 @@ public class UserInfoPojo {
     private String ringId;
     private String login;
     private String id;
-    private String $type;
 }

@@ -4,7 +4,7 @@ import POJO.CreateIsuePojo;
 import Specific.TaskCreationSpecification;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-public class AddIsue extends BaseTest {
+public class AddIsueTest extends BaseTest {
 
 
     @Test

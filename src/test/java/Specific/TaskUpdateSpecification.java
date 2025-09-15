@@ -3,8 +3,6 @@ import POJO.UpdatePojo;
 import org.hamcrest.Matchers;
 import io.restassured.RestAssured;
 
-
-
 public class TaskUpdateSpecification {
     public static String updateTask(String baseUrl, String authToken , UpdatePojo updatePojo, String issueID) {
         return RestAssured.given()

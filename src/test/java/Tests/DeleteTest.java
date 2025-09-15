@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-public class Delete extends BaseTest{
+public class DeleteTest extends BaseTest{
     @Test
     void deleteTaskTest() throws IOException {
 
